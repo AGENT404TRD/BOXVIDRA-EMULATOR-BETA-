@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pkg install wget
-pkg install git
-pkg install hashdeep
+pkg install wget -y
+pkg install git -y
+pkg install hashdeep -y
 clear
 sleep 2
 echo -n "Setting up storage permissions.."
@@ -99,11 +99,11 @@ pkg install pulseaudio -y &>/dev/null
 pkg install wget -y &>/dev/null
 pkg install root-repo -y &>/dev/null
 pkg install termux-x11-nightly -y &>/dev/null
-pkg install x11-repo &>/dev/null
-pkg install termux-x11-nightly &>/dev/null
-pkg install pulseaudio &>/dev/null
-pkg install xfce4 &>/dev/null
-pkg install tur-repo &>/dev/null
+pkg install x11-repo -y &>/dev/null
+pkg install termux-x11-nightly -y &>/dev/null
+pkg install pulseaudio -y &>/dev/null
+pkg install xfce4 -y &>/dev/null
+pkg install tur-repo -y &>/dev/null
 pkg install xwayland -y &>/dev/null
 pkg install xorg-xrandr -y &>/dev/null
 pkg install p7zip -y &>/dev/null
@@ -122,18 +122,22 @@ git clone https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR-BETA-.git
 rm -r "/data/data/com.termux/files/usr/glibc/opt/scripts"
 cd BOXVIDRA-EMULATOR-BETA-
 cp -r scripts "/data/data/com.termux/files/usr/glibc/opt"
+sleep 2
 chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/"
 chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra"
 chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra_menu"
-chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra-safemode"
+chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra_wine"
+chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra-safemode.sh"
 chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra-start"
-chmod +x * "/data/data/com.termux/files/usr/glibc/opt/scripts/"
 cp /data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra /data/data/com.termux/files/usr/bin
+sleep 2
 chmod +x * "/data/data/com.termux/files/usr/bin"
 chmod +x * "/data/data/com.termux/files/usr/bin/boxvidra"
+
 if [ ! -d "~/Desktop" ]; then
     mkdir -p ~/Desktop
 fi
+
 mv Programs/* ~/Desktop/
 
 cd ..
